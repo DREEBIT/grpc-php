@@ -7,3 +7,5 @@ requests, bug reports, or development contributions should be directed to
 that project.
 
 To install gRPC for PHP, please see https://github.com/grpc/grpc/tree/master/src/php
+
+test
