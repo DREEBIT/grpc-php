@@ -1,11 +1,7 @@
 # gRPC PHP Client Library
 
-This repository contains only PHP files to support Composer installation.
+This repository is a fork of [grpc-php](https://github.com/grpc/grpc-php).
+It adds callbacks to implement custom behavior before and after processing an RPC call.
+An error callback is also added, to implement application-specific error handling.
 
-This repository is a mirror of [gRPC](https://github.com/grpc/grpc). Any support
-requests, bug reports, or development contributions should be directed to
-that project.
-
-To install gRPC for PHP, please see https://github.com/grpc/grpc/tree/master/src/php
-
-test
+To install gRPC for PHP, and for any further instructions please see https://github.com/grpc/grpc/tree/master/src/php
