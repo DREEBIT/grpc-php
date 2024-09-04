@@ -1,14 +1,13 @@
 {
-  "name": "dreebit/grpc-php",
+  "name": "grpc/grpc",
   "type": "library",
   "description": "gRPC library for PHP",
   "keywords": ["rpc"],
-  "homepage": "https://www.dreebit.com",
+  "homepage": "https://grpc.io",
   "license": "Apache-2.0",
-  "version": "1.0.0",
+  "version": "1.57.0",
   "require": {
-    "php": ">=7.1.0",
-    "ext-grpc": "*"
+    "php": ">=7.1.0"
   },
   "require-dev": {
     "google/auth": "^v1.3.0"
