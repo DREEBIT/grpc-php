@@ -1,4 +1,4 @@
-# gRPC PHP Client Library
+# gRPC PHP Server and Client Library
 
 This repository is a fork of [grpc-php](https://github.com/grpc/grpc-php).
 
