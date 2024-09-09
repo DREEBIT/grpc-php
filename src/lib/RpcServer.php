@@ -22,6 +22,7 @@ namespace Grpc;
 use Exception;
 use InvalidArgumentException;
 use RuntimeException;
+use Throwable;
 
 /**
  * An enhanced version of ```Grpc\RpcServer```.
@@ -178,7 +179,7 @@ class RpcServer extends Server
 
                 $this->triggerCallbacks(self::HOOK_AFTER, $method_desc, $context, $server_reader, $server_writer);
             }
-            catch (Exception $e)
+            catch (Throwable $e)
             {
                 $context->setStatus(Status::status(
                     STATUS_INTERNAL,
@@ -193,7 +194,7 @@ class RpcServer extends Server
                 $server_writer->finish();
             }
         }
-        catch (Exception $e)
+        catch (Throwable $e)
         {
             if ($this->errorCallback)
             {
