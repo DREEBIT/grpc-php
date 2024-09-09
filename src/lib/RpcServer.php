@@ -187,7 +187,7 @@ class RpcServer extends Server
 
                 if ($this->errorCallback)
                 {
-                    call_user_func([$this->errorCallback, 'invoke'], $e, $context);
+                    $this->errorCallback->invoke($e, $context);
                 }
 
                 $server_writer->finish();
@@ -197,7 +197,7 @@ class RpcServer extends Server
         {
             if ($this->errorCallback)
             {
-                call_user_func([$this->errorCallback, 'invoke'], $e, null);
+                $this->errorCallback->invoke($e, null);
             }
 
             fwrite(STDERR, "ERROR: " . $e->getMessage() . PHP_EOL);
@@ -292,8 +292,7 @@ class RpcServer extends Server
                 throw new RuntimeException('Callback must implement ServerCallbackInterface');
             }
 
-            call_user_func([$callback, 'invoke'],
-                // args passed to the callback
+            $callback->invoke(
                 $method_desc,
                 $context,
                 $server_reader,
