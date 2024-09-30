@@ -18,5 +18,9 @@
     "psr-4": {
       "Grpc\\": "src/lib/"
     }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.3",
+    "google/protobuf": "^4.28"
   }
 }
